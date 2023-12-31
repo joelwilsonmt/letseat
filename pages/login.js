@@ -38,7 +38,7 @@ function Login(props) {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-              <img src="http://localhost:1337/uploads/5a60a9d26a764e7cba1099d8b157b5e9.png" />
+              <h1>Sign In</h1>
             </div>
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&
@@ -82,8 +82,7 @@ function Login(props) {
                       </a>
                     </span>
                     <Button
-                      style={{ float: "right", width: 120 }}
-                      color="primary"
+                      style={{ float: "right", width: 120, backgroundColor: "#7A9D54" }}
                       onClick={() => {
                         setLoading(true);
                         login(data.identifier, data.password)
@@ -98,7 +97,7 @@ function Login(props) {
                           });
                       }}
                     >
-                      {loading ? "Loading... " : "Submit"}
+                      {loading ? "Loading... " : "Sign In"}
                     </Button>
                   </FormGroup>
                 </fieldset>
@@ -110,12 +109,13 @@ function Login(props) {
       <style jsx>
         {`
           .paper {
-            border: 1px solid lightgray;
+            border: 2px solid lightgray;
             box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
               0px 1px 1px 0px rgba(0, 0, 0, 0.14),
               0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-            border-radius: 6px;
+            border-radius: 14px;
             margin-top: 90px;
+            min-width: 450px;
           }
           .notification {
             color: #ab003c;
@@ -123,9 +123,11 @@ function Login(props) {
           .header {
             width: 100%;
             height: 120px;
-            background-color: #2196f3;
             margin-bottom: 30px;
-            border-radius-top: 6px;
+            border-radius-top: 14px;
+            background: url("/login-background2.webp") no-repeat center center
+              fixed;
+            background-size: cover;
           }
           .wrapper {
             padding: 10px 30px 20px 30px !important;

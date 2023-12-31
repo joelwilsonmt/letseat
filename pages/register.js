@@ -89,8 +89,11 @@ const Register = () => {
                       </a>
                     </span>
                     <Button
-                      style={{ float: "right", width: 120 }}
-                      color="primary"
+                      style={{
+                        float: "right",
+                        width: 120,
+                        backgroundColor: "#7A9D54",
+                      }}
                       disabled={loading}
                       onClick={() => {
                         setLoading(true);
@@ -99,16 +102,18 @@ const Register = () => {
                             // set authed user in global context object
                             appContext.setUser(res.data.user);
                             setLoading(false);
-                            console.log(`registered user: ${JSON.stringify(res.data)}`)
+                            console.log(
+                              `registered user: ${JSON.stringify(res.data)}`
+                            );
                           })
                           .catch((error) => {
-                            console.log(`error in register: ${error}`)
+                            console.log(`error in register: ${error}`);
                             //setError(error.response.data);
                             setLoading(false);
                           });
                       }}
                     >
-                      {loading ? "Loading.." : "Submit"}
+                      {loading ? "Loading..." : "Submit"}
                     </Button>
                   </FormGroup>
                 </fieldset>
@@ -124,8 +129,9 @@ const Register = () => {
             box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
               0px 1px 1px 0px rgba(0, 0, 0, 0.14),
               0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-            border-radius: 6px;
+            border-radius: 14px;
             margin-top: 90px;
+            min-width: 450px;
           }
           .notification {
             color: #ab003c;
@@ -133,7 +139,9 @@ const Register = () => {
           .header {
             width: 100%;
             height: 120px;
-            background-color: #2196f3;
+            background: url("/login-background2.webp") no-repeat center center
+              fixed;
+            background-size: cover;
             margin-bottom: 30px;
             border-radius-top: 6px;
           }

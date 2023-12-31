@@ -45,32 +45,30 @@ function RestaurantList(props) {
 
   let restId = searchQuery[0] ? searchQuery[0].id : null;
 
-  // definet renderer for Dishes
+  // define renderer for Dishes
   const renderDishes = (restaurantID) => {
     return (<Dishes restId={restaurantID}> </Dishes>)
   };
   if (searchQuery.length > 0) {
-    const restList = searchQuery.map((res) => (
-      <Col xs="6" sm="4" key={res.id}>
-        <Card style={{ margin: "0 0.5rem 20px 0.5rem" }}>
-          <CardImg
-            top={true}
-            style={{ height: 200 }}
-            src={
-              `http://localhost:1337` + res.image.url
-            }
-          />
-          <CardBody>
-            <CardText>{res.description}</CardText>
-          </CardBody>
-          <div className="card-footer">
-
-            <Button color="info" onClick={() => setRestaurantID(res.id)}>{res.name}</Button>
-
-          </div>
-        </Card>
-      </Col>
-    ))
+      const restList = searchQuery.map((res) => (
+        <Col xs="12" sm="6" md="6" lg="4" key={res.id}>
+          <Card style={{ margin: "0 0.5rem 20px 0.5rem", height: "500px" }}>
+            <div style={{ paddingTop: "56.25%", position: "relative" }}>
+              <CardImg
+                top={true}
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                src={`http://localhost:1337` + res.image.url}
+              />
+            </div>
+            <CardBody style={{ height: "400px", overflow: "hidden" }}>
+              <CardText style={{ overflowY: 'auto', maxHeight: '100%' }}>{res.description}</CardText>
+            </CardBody>
+            <div className="card-footer text-center">
+              <Button color="info" onClick={() => setRestaurantID(res.id)}>{res.name}</Button>
+            </div>
+          </Card>
+        </Col>
+      ));
 
     return (
 

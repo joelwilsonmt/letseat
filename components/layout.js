@@ -40,7 +40,7 @@ const Layout = (props) => {
         <Nav className="navbar navbar-dark bg-dark">
           <NavItem>
             <Link href="/">
-              <a className="navbar-brand">Let's Eat</a>
+              <a className="navbar-brand">Let's Eat!</a>
             </Link>
           </NavItem>
           <NavbarSearch />

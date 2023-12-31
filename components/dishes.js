@@ -51,16 +51,16 @@ const GET_RESTAURANT_DISHES = gql`
     return (
       <>
           {restaurant.dishes.map((res) => (
-            <Col xs="6" sm="4" style={{ padding: 0 }} key={res.id}>
-              <Card style={{ margin: "0 10px" }}>
+            <Col xs="12" sm="6" md="6" lg="6" style={{ padding: 0 }} key={res.id}>
+              <Card style={{ margin: "0 0.5rem 20px 0.5rem", maxHeight: "500px" }}>
                 <CardImg
                   top={true}
                   style={{ height: 150, width:150 }}
                   src={`http://localhost:1337${res.image.url}`}
                 />
-                <CardBody>
+                <CardBody style={{ height: "400px", overflow: "hidden" }}>
                   <CardTitle>{res.name}</CardTitle>
-                  <CardText>{res.description}</CardText>
+                  <CardText style={{ overflowY: 'auto', maxHeight: '100%' }}>{res.description}</CardText>
                 </CardBody>
                 <div className="card-footer">
                   <Button
@@ -78,7 +78,7 @@ const GET_RESTAURANT_DISHES = gql`
         </>
         )}
         else{
-          return <h1>No Dishes</h1>
+          return <h1>No Dishes in Cart</h1>
         }
     }
     export default Dishes
