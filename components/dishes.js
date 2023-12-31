@@ -78,7 +78,7 @@ const GET_RESTAURANT_DISHES = gql`
         </>
         )}
         else{
-          return <h1>No Dishes in Cart</h1>
+          return <h1>There are no dishes in your cart</h1>
         }
     }
     export default Dishes
