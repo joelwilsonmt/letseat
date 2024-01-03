@@ -5,6 +5,7 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CardSection from "./cardSection";
 import AppContext from "./context";
 import Cookies from "js-cookie";
+import { useRouter } from "next/router";
 
 function CheckoutForm() {
   const [data, setData] = useState({
@@ -52,12 +53,15 @@ function CheckoutForm() {
     };
 
     const response = await fetch(`${API_URL}/orders`, fetchBody);
+    const router = useRouter();
 
     console.log("response:", await response);
 
     if (!response.ok) {
+      router.push("/order-success");
+      console.log("Order succeeded!");
+    } else {
       setError(response.statusText);
-      console.log("SUCCESS");
     }
 
     // OTHER stripe methods you can use depending on app
