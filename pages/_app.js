@@ -7,7 +7,8 @@ import Cookie from "js-cookie"
 import "../styles/NavbarSearch.css";
 import "../styles/home.css"
 import "../styles/login.css";
-import "../styles/checkoutForm.css"
+import "../styles/checkoutForm.css";
+import "../styles/register.css";
 import NavbarSearch from "../components/navbarSearch";
 
 
