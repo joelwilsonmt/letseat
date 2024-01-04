@@ -82,7 +82,11 @@ function Login(props) {
                       </a>
                     </span>
                     <Button
-                      style={{ float: "right", width: 120, backgroundColor: "#7A9D54" }}
+                      style={{
+                        float: "right",
+                        width: 120,
+                        backgroundColor: "#7A9D54",
+                      }}
                       onClick={() => {
                         setLoading(true);
                         login(data.identifier, data.password)
@@ -106,40 +110,6 @@ function Login(props) {
           </div>
         </Col>
       </Row>
-      <style jsx>
-        {`
-          .paper {
-            border: 2px solid lightgray;
-            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-              0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-              0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-            border-radius: 14px;
-            margin-top: 90px;
-            min-width: 450px;
-          }
-          .notification {
-            color: #ab003c;
-          }
-          .header {
-            width: 100%;
-            height: 120px;
-            margin-bottom: 30px;
-            border-radius-top: 14px;
-            background: url("/login-background2.webp") no-repeat center center
-              fixed;
-            background-size: cover;
-          }
-          .wrapper {
-            padding: 10px 30px 20px 30px !important;
-          }
-          a {
-            color: blue !important;
-          }
-          img {
-            margin: 15px 30px 10px 50px;
-          }
-        `}
-      </style>
     </Container>
   );
 }

@@ -22,7 +22,7 @@ function Checkout() {
   return (
     <Row>
       <Col style={{ paddingRight: 0 }} sm={{ size: 3, order: 1, offset: 2 }}>
-        <h1 style={{ margin: 20 }}>Checkout</h1>
+        <h1 style={{ margin: 20 }}>Let's eat!</h1>
         <Cart isAuthenticated={isAuthenticated} />
       </Col>
       <Col style={{ paddingLeft: 5 }} sm={{ size: 6, order: 2 }}>

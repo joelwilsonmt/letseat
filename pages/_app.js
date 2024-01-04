@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Cookie from "js-cookie"
 import "../styles/NavbarSearch.css";
 import "../styles/home.css"
+import "../styles/login.css";
+import "../styles/checkoutForm.css"
 import NavbarSearch from "../components/navbarSearch";
 
 
