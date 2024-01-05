@@ -13,8 +13,7 @@
   .header {
     width: 100%;
     height: 120px;
-    background: url("/login-background2.webp") no-repeat center center
-      fixed;
+    background: url("/login-background2.webp") no-repeat center center;
     background-size: cover;
     margin-bottom: 30px;
     border-radius-top: 6px;

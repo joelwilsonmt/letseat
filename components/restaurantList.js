@@ -1,6 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
-import Dishes from "./dishes"
+import Dishes from "./Dishes"
 import { useContext, useState } from 'react';
+import Link from "next/link";
 
 
 import AppContext from "./context"
@@ -50,25 +51,22 @@ function RestaurantList(props) {
     return (<Dishes restId={restaurantID}> </Dishes>)
   };
   if (searchQuery.length > 0) {
-      const restList = searchQuery.map((res) => (
-        <Col xs="12" sm="6" md="6" lg="4" key={res.id}>
-          <Card style={{ margin: "0 0.5rem 20px 0.5rem", height: "500px" }}>
-            <div style={{ paddingTop: "56.25%", position: "relative" }}>
-              <CardImg
-                top={true}
-                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-                src={`http://localhost:1337` + res.image.url}
-              />
-            </div>
-            <CardBody style={{ height: "400px", overflow: "hidden" }}>
-              <CardText style={{ overflowY: 'auto', maxHeight: '100%' }}>{res.description}</CardText>
-            </CardBody>
-            <div className="card-footer text-center">
-              <Button color="info" onClick={() => setRestaurantID(res.id)}>{res.name}</Button>
-            </div>
-          </Card>
-        </Col>
-      ));
+    const restList = searchQuery.map((res) => (
+      <Col xs="12" sm="6" md="6" lg="4" key={res.id}>
+        <Link href={`/restaurant/${res.id}`}>
+          <a>
+            <Card style={{ margin: '0 0.5rem 20px 0.5rem', height: '500px' }}>
+              {/* ... (rest of the card content) */}
+              <div className="card-footer text-center">
+                <Button color="info" onClick={() => setRestaurantID(res.id)}>
+                  {res.name}
+                </Button>
+              </div>
+            </Card>
+          </a>
+        </Link>
+      </Col>
+    ));
 
     return (
 

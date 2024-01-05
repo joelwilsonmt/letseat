@@ -15,8 +15,7 @@
     height: 120px;
     margin-bottom: 30px;
     border-radius-top: 14px;
-    background: url("/login-background2.webp") no-repeat center center
-      fixed;
+    background: url("/login-background2.webp") no-repeat center center;
     background-size: cover;
   }
   .wrapper {
