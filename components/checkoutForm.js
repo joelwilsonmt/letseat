@@ -25,7 +25,7 @@ function CheckoutForm() {
     // update the state data object
     setData({ ...data, updateItem });
   }
-
+  const router = useRouter();
   async function submitOrder() {
     // event.preventDefault();
     // // Use elements.getElement to get a reference to the mounted Element.
@@ -53,11 +53,11 @@ function CheckoutForm() {
     };
 
     const response = await fetch(`${API_URL}/orders`, fetchBody);
-    const router = useRouter();
+    
 
     console.log("response:", await response);
 
-    if (!response.ok) {
+    if (response.ok) {
       router.push("/order-success");
       console.log("Order succeeded!");
     } else {
