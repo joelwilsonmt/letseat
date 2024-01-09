@@ -1,24 +1,18 @@
 import { useContext, useState } from "react";
 import Head from "next/head";
-import AppContext from "../components/context";
-import Home from "./index"
-import Layout from "../components/layout"
-import Cookie from "js-cookie"
-import "../styles/NavbarSearch.css";
-import "../styles/home.css"
-import "../styles/login.css";
-import "../styles/checkoutForm.css";
-import "../styles/register.css";
-import "../styles/variables.css";
-import NavbarSearch from "../components/navbarSearch";
+import AppContext from "../src/Providers/Context";
+import Layout from "../src/components/Layout";
+import "../src/styles/globals.css";
+import '../src/styles/styles.css';
 
+const title = "Restaurant App";
 
 function MyApp(props){
   var {cart,addItem,removeItem, user, setUser} = useContext(AppContext)
   const [state,setState] = useState({cart:cart});
   const { Component, pageProps } = props;
-  
-  
+
+
   setUser = (user) => {
     setState({ user });
   };
@@ -29,7 +23,7 @@ function MyApp(props){
     let foundItem = true;
     if(items.length > 0){
       foundItem = items.find((i) => i.id === item.id);
-     
+
       if(!foundItem) foundItem = false;
     }
     else{
@@ -39,7 +33,7 @@ function MyApp(props){
     // if item is not new, add to cart, set quantity to 1
     if (!foundItem) {
       //set quantity property to 1
-    
+
       let temp = JSON.parse(JSON.stringify(item));
       temp.quantity = 1;
       var newCart = {
@@ -63,7 +57,7 @@ function MyApp(props){
     }
     setState({cart: newCart});  // problem is this is not updated yet
     console.log(`state reset to cart:${JSON.stringify(state)}`)
-     
+
   };
   removeItem = (item) => {
     let { items } = state.cart;
@@ -84,7 +78,7 @@ function MyApp(props){
       console.log(`Try remove item ${JSON.stringify(foundItem)}`)
       const index = items.findIndex((i) => i.id === foundItem.id);
       items.splice(index, 1);
-      var newCart= { items: items, total: state.cart.total - item.price } 
+      var newCart= { items: items, total: state.cart.total - item.price }
     }
     setState({cart:newCart});
   }
@@ -99,15 +93,17 @@ function MyApp(props){
           crossOrigin="anonymous"
         />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"></link>
+        <title>{title}</title>
+        <script src="https://js.stripe.com/v3" />
       </Head>
-    
+
       <Layout>
           <Component {...pageProps} />
       </Layout>
 
     </AppContext.Provider>
   );
-  
+
 }
 
 

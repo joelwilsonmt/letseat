@@ -4,16 +4,15 @@ import React, { useContext } from "react";
 import { Row, Col } from "reactstrap";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-import CheckoutForm from "../components/checkoutForm";
-import AppContext from "../components/context";
-import Cart from "../components/Cart";
+import { CheckoutForm, Cart } from "../src/components";
+import AppContext from "../src/Providers/Context";
 
 function Checkout() {
   // get app context
   const {isAuthenticated} = useContext(AppContext);
   // isAuthenticated is passed to the cart component to display order button
   //const isAuthenticated  = true;
-  
+
   // load stripe to inject into elements components
   const stripePromise = loadStripe(
     "pk_test_51OKmDEDKiT1VaJkErW7vaphjFWfhsG9xwWTCjw59TZcpxwt2v9ihg6h64X1logoVkjKFV5icpXmIiSwyu4loWCR00079NYRcfK"
