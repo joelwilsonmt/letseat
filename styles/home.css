@@ -110,14 +110,32 @@
 }
 
 .logo {
-  height: 1em;
+  height: 3em;
+  margin: 10px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   min-height: 200px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  /* background-color: #7a9d54; */
+  /* background: var(--lightgreen); */
+  background: linear-gradient(
+    to right,
+    var(--lightgreen),
+    var(--darkgreen)
+  );
+  border-bottom: 4px solid #8c3333;
+  color: black;
+}
+
+.navbar-brand {
+  font-family: "Work Sans", sans-serif;
 }
 
 @media (max-width: 600px) {
@@ -126,4 +144,3 @@
     flex-direction: column;
   }
 }
-

@@ -9,6 +9,7 @@ import "../styles/home.css"
 import "../styles/login.css";
 import "../styles/checkoutForm.css";
 import "../styles/register.css";
+import "../styles/variables.css";
 import NavbarSearch from "../components/navbarSearch";
 
 

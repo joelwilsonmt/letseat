@@ -37,7 +37,8 @@ const Layout = (props) => {
             }
           `}
         </style>
-        <Nav className="navbar navbar-dark bg-dark">
+        <Nav className="navbar">
+          <img src="/delivery-man.png" alt="Delivery Man" className="logo" />
           <NavItem>
             <Link href="/">
               <a className="navbar-brand">Let's Eat!</a>
@@ -55,17 +56,20 @@ const Layout = (props) => {
           </NavItem>
           <NavItem>
             {user ? (
-              <Link href="/">
-                <a
-                  className="nav-link"
-                  onClick={() => {
-                    logout();
-                    setUser(null);
-                  }}
-                >
-                  Logout
-                </a>
-              </Link>
+              <>
+                <h5>Hello, {user.username}</h5>
+                <Link href="/">
+                  <a
+                    className="nav-link"
+                    onClick={() => {
+                      logout();
+                      setUser(null);
+                    }}
+                  >
+                    Logout
+                  </a>
+                </Link>
+              </>
             ) : (
               <Link href="/login">
                 <a className="nav-link">Sign in</a>
