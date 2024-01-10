@@ -12,8 +12,8 @@ import {
   Label,
   Input,
 } from "reactstrap";
-import { login } from "../components/auth";
-import AppContext from "../components/context";
+import { login } from "../src/components/Auth";
+import AppContext from "../src/Providers/Context";
 
 function Login(props) {
   const [data, updateData] = useState({ identifier: "", password: "" });
