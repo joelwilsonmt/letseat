@@ -35,7 +35,6 @@ function RestaurantList(props) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p className="alert alert-danger">{error.message}</p>;
   if (!data) return <p className="alert alert-warning">Not found</p>;
-  console.log(`Query Data: ${data.restaurants}`);
 
   let searchQuery =
     data.restaurants.filter((res) => {

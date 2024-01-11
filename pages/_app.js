@@ -10,10 +10,10 @@ function MyApp(props) {
     var { cart, addItem, removeItem, user, setUser } = useContext(AppContext);
     const [state, setState] = useState({ cart: cart });
     const { Component, pageProps } = props;
-
     setUser = (user) => {
         setState({ user });
     };
+    // TODO: define these in Context:
     addItem = (item) => {
         let { items } = state.cart;
         //check for item already in cart
