@@ -5,7 +5,7 @@ import AppContext from '../Providers/Context';
 import { Button, Card, CardBody, CardImg, CardText, CardTitle, Col } from 'reactstrap';
 
 function Dishes({ restId, searchTerm }) {
-    const [restaurantID, setRestaurantID] = useState();
+    const [restaurantID, setRestaurantID] = useState(0);
     const { addItem } = useContext(AppContext);
 
     const GET_RESTAURANT_DISHES = gql`
@@ -32,6 +32,8 @@ function Dishes({ restId, searchTerm }) {
         variables: { id: restId },
     });
 
+    console.log("Data", data);
+
     if (loading) return <p>Loading...</p>;
     if (error) return <p>ERROR here</p>;
     if (!data) return <p>Not found</p>;
@@ -40,14 +42,14 @@ function Dishes({ restId, searchTerm }) {
     const { dishes } = restaurant;
 
     // // Filter dishes based on the search term
-    const filteredDishes = dishes.filter((dish) =>
+    const filteredDishes = dishes?.filter((dish) =>
         dish.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     if (restId > 0) {
         return (
             <>
-                {filteredDishes ? filteredDishes : dishes.map((res) => (
+                {filteredDishes.map((res) => (
                     <Col xs="12" sm="6" md="6" lg="6" style={{ padding: 0 }} key={res.id}>
                         <Card style={{ margin: '0 0.5rem 20px 0.5rem', maxHeight: '500px' }}>
                             <CardImg
