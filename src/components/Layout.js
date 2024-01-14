@@ -3,18 +3,20 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
 import { Container, Nav, NavItem } from 'reactstrap';
-import AppContext from '../Providers/Context';
+import { useApp } from '../Providers/Context';
 import { NavbarSearch } from './index';
 // import Carousel from "./carousel";
 
 const Layout = (props) => {
-    const { user } = useContext(AppContext);
+    const { user } = useApp();
     console.log('user', user);
     return (
         <div>
             <header>
                 <Nav className="navbar">
-                    <img src="/delivery-man.png" alt="Delivery Man" className="logo" />
+                    <Link href="/">
+                        <img src="/delivery-man.png" alt="Delivery Man" className="logo" />
+                    </Link>
                     <NavItem>
                         <Link href="/">
                             <a className="navbar-brand">Let's Eat!</a>

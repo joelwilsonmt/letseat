@@ -7,7 +7,7 @@
     --lightgreen: #7a9d54;
     --darkgreen: #557a46;
     --burgundy: #8c3333;
-    --yellow: #F2EE9D;
+    --yellow: #f2ee9d;
 }
 
 /* Register Page: */
@@ -30,6 +30,42 @@
     margin-bottom: 30px;
     border-top-left-radius: 6px;
 }
+
+.navbar a {
+    color: #ffffff; /* Change the color as needed */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Lemon', serif;
+}
+
+.navbar a:hover {
+    color: var(--yellow);
+    text-shadow: 2px 2px 0px var(--burgundy);
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Apply the wiggle animation on hover */
+.logo:hover {
+    animation: wiggle 0.7s ease-in-out infinite;
+}
+
 .wrapper {
     padding: 10px 30px 20px 30px !important;
 }
@@ -96,7 +132,7 @@
     align-items: center;
 }
 
-.title a {
+/* .title a {
     color: #0070f3;
     text-decoration: none;
 }
@@ -105,7 +141,7 @@
 .title a:focus,
 .title a:active {
     text-decoration: underline;
-}
+} */
 
 .title {
     margin: 0;
@@ -144,20 +180,20 @@
 .card {
     margin: 1rem;
     flex-basis: 45%;
-    padding: 1.5rem;
+    padding: 1rem;
     text-align: left;
-    color: inherit;
+    /* color: inherit; */
     text-decoration: none;
     border: 1px solid #eaeaea;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.card:hover,
+/* .card:hover,
 .card:focus,
 .card:active {
     border-color: #0070f3;
-}
+} */
 
 .card h3 {
     margin: 0 0 1rem 0;
@@ -176,7 +212,7 @@
 }
 .logo-large {
     height: 20vh;
-    margin: 10px;
+    margin: 50px;
 }
 
 .header {
@@ -198,7 +234,12 @@
 }
 
 .navbar-brand {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Lemon', serif;
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: var(--burgundy);
 }
 
 @media (max-width: 600px) {
@@ -265,7 +306,7 @@ button {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.025em;
-    background-color: #6772e5;
+    background-color: var(--yellow);
     text-decoration: none;
     -webkit-transition: all 150ms ease;
     transition: all 150ms ease;
@@ -317,9 +358,9 @@ input:focus,
 }
 
 /* Layout: */
-a {
+/* a {
     color: white;
-}
+} */
 h5 {
     color: white;
     padding-top: 11px;

@@ -5,7 +5,6 @@ import AppContext from '../Providers/Context';
 import { Button, Card, CardBody, CardImg, CardText, CardTitle, Col } from 'reactstrap';
 
 function Dishes({ restId, searchTerm }) {
-    const [restaurantID, setRestaurantID] = useState(0);
     const { addItem } = useContext(AppContext);
 
     const GET_RESTAURANT_DISHES = gql`
@@ -26,24 +25,20 @@ function Dishes({ restId, searchTerm }) {
         }
     `;
 
-    const router = useRouter();
-
     const { loading, error, data } = useQuery(GET_RESTAURANT_DISHES, {
         variables: { id: restId },
     });
-
-    console.log("Data", data);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>ERROR here</p>;
     if (!data) return <p>Not found</p>;
 
     let { restaurant } = data;
-    const { dishes } = restaurant;
+    const { dishes } = restaurant || {};
 
     // // Filter dishes based on the search term
     const filteredDishes = dishes?.filter((dish) =>
-        dish.name.toLowerCase().includes(searchTerm.toLowerCase())
+        dish.name.toLowerCase().includes(searchTerm?.toLowerCase())
     );
 
     if (restId > 0) {
@@ -59,7 +54,7 @@ function Dishes({ restId, searchTerm }) {
                             />
                             <CardBody style={{ height: '400px', overflow: 'hidden' }}>
                                 <CardTitle>{res.name}</CardTitle>
-                                <CardText style={{ overflowY: 'auto', maxHeight: '100%' }}>
+                                <CardText style={{ overflowY: 'auto', maxHeight: '100%', color: 'black' }}>
                                     {res.description}
                                 </CardText>
                             </CardBody>
