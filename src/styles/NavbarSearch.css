@@ -1,0 +1,79 @@
+/* Search-form.module.css */
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s;
+    min-width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 100px;
+    margin: 0px;
+}
+
+.input {
+    position: absolute;
+    border: 4px solid white !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.fa {
+    display: block;
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+    margin: 0 10px 0 auto;
+    z-index: 2;
+    padding: 5px;
+}
+
+.search-form:hover,
+.search-form:valid {
+    min-width: 200px;
+    cursor: pointer;
+}
+
+.search-form:hover .input,
+.search-form:valid .input {
+    display: block;
+}
+
+/* .search-form:hover .fa,
+.search-form:valid .fa {
+    background: #07051a;
+    color: white;
+} */
+
+.clearBtn {
+    display: none;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.search-form:valid .clearBtn {
+    display: block;
+}

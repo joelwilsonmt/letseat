@@ -1,0 +1,19 @@
+#item-price {
+    font-size: 1.3em;
+    color: rgba(97, 97, 97, 1);
+}
+#item-quantity {
+    font-size: 0.95em;
+    padding-bottom: 4px;
+    color: rgba(158, 158, 158, 1);
+    margin-left: 5px;
+}
+#item-name {
+    font-size: 1.3em;
+    color: rgba(97, 97, 97, 1);
+}
+
+/* inline styles: */
+.items-one {
+    margin-bottom: 15px;
+}

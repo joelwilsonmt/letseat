@@ -18,6 +18,7 @@
     "next": "^9.5.5",
     "react": "16.14.0",
     "react-dom": "16.14.0",
+    "react-parallax-tilt": "^1.7.181",
     "react-responsive-carousel": "^3.2.23",
     "reactstrap": "^8.6.0",
     "stripe": "^14.9.0"
