@@ -186,24 +186,35 @@
     text-decoration: none;
     border: 1px solid #eaeaea;
     border-radius: 10px;
-    transition: color 0.15s ease, border-color 0.15s ease;
+    /* transition: color 0.15s ease, border-color 0.15s ease; */
 }
 
-/* .card:hover,
-.card:focus,
-.card:active {
-    border-color: #0070f3;
-} */
-
-.card h3 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
+.restaurant-text {
+    text-decoration: none;
 }
 
-.card p {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
+.restaurant-text:hover {
+    color: black;
+    font-weight: 2rem;
+}
+
+.restaurant-button {
+    background-color: var(--lightgreen);
+    border: 2px solid var(--burgundy);
+    max-width: 95%;
+    max-height: 100px;
+    text-align: center;
+}
+
+.restaurant-button:hover {
+    background-color: var(--burgundy);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.button-text {
+    /* white-space: nowrap;  */
+    text-overflow: hidden;
 }
 
 .logo {
@@ -240,6 +251,14 @@
 
 .navbar-brand:hover {
     color: var(--burgundy);
+}
+
+.dish-search {
+    margin: 20px 0px 20px 10px;
+}
+
+.dish-name {
+    font-weight: 700;
 }
 
 @media (max-width: 600px) {
@@ -291,39 +310,40 @@ label {
     font-weight: 300;
     letter-spacing: 0.025em;
 }
-button {
-    white-space: nowrap;
-    border: 0;
-    outline: 0;
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 14px;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    color: #fff;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.025em;
-    background-color: var(--yellow);
-    text-decoration: none;
-    -webkit-transition: all 150ms ease;
-    transition: all 150ms ease;
-    margin-top: 10px;
+
+.add-to-cart-button {
+    background-color: var(--lightgreen);
+    border: 2px solid var(--burgundy);
+    max-width: 95%;
+    max-height: 100px;
+    text-align: center;
 }
+
+.add-to-cart-button:hover {
+    background-color: var(--burgundy);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.order-button {
+    margin: 10px;
+    background-color: var(--burgundy);
+    color: white;
+    border-radius: 6px;
+    font-family: 'Lemon', serif;
+}
+
+.order-button:hover {
+    background-color: var(--yellow);
+    color: var(--burgundy);
+}
+
 form {
     /* margin-bottom: 40px;
     padding-bottom: 40px; */
     border-bottom: 3px solid #e6ebf1;
 }
-button:hover {
-    color: #fff;
-    cursor: pointer;
-    background-color: #7795f8;
-    transform: translateY(-1px);
-    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-}
+
 input,
 .StripeElement {
     display: block;

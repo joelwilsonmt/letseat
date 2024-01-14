@@ -4,7 +4,7 @@ import { AppProvider, useApp } from '../src/Providers/Context';
 import Layout from '../src/components/Layout';
 import '../src/styles/styles.css';
 
-const title = 'Restaurant App';
+const title = 'Let\'s Eat!';
 
 function MyApp(props) {
     const { Component, pageProps } = props;

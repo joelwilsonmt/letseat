@@ -72,7 +72,7 @@ function Cart() {
                     <h3>${cart?.total}</h3>
                 </Badge>
                 <Link href="/checkout/">
-                    <Button style={{ width: '60%' }} color="primary">
+                    <Button className="order-button" style={{ width: '60%' }}>
                         <a>Order</a>
                     </Button>
                 </Link>

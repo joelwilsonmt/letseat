@@ -60,6 +60,7 @@ function RestaurantDetails() {
                 {/* Search bar */}
                 <input
                     type="text"
+                    className="dish-search"
                     placeholder="Search for dishes..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
