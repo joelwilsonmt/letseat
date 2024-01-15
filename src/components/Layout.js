@@ -24,13 +24,11 @@ const Layout = (props) => {
                     </NavItem>
                     <NavbarSearch />
                     <NavItem className="ml-auto">
-                        {user ? (
-                            <h5>{user.username}</h5>
-                        ) : (
+                        {!user ? (
                             <Link href="/register">
                                 <a className="nav-link"> Sign up</a>
                             </Link>
-                        )}
+                        ) : (<div></div>)}
                     </NavItem>
                     <NavItem>
                         {user ? (
