@@ -235,8 +235,6 @@
 }
 
 .navbar {
-    /* background-color: #7a9d54; */
-    /* background: var(--lightgreen); */
     background: linear-gradient(to right, var(--lightgreen), var(--darkgreen));
     border-bottom: 4px solid #8c3333;
     color: black;
