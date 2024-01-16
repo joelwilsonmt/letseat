@@ -23,6 +23,9 @@
     "reactstrap": "^8.6.0",
     "stripe": "^14.9.0"
   },
+  "engines" : { 
+    "node" : ">=14.0.0 <16.0.0"
+  },
   "description": "Exercise05 is full Shopping Cart with Stripe Billing",
   "main": "index.js",
   "author": "jrw@mit.edu",
