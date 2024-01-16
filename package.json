@@ -15,6 +15,7 @@
         "lodash": "^4.17.5",
         "sqlite3": "^5.1.6",
         "strapi": "3.0.0-beta.14",
+        "strapi-admin": "3.0.0-beta.14",
         "strapi-hook-bookshelf": "3.0.0-beta.14",
         "strapi-hook-knex": "^3.0.0-beta.14",
         "strapi-plugin-content-manager": "3.0.0-beta.14",
@@ -34,8 +35,8 @@
         "uuid": "a45046ad-52e3-426c-a7aa-25c5de132bfe"
     },
     "engines": {
-        "node": ">=18.0.0",
-        "npm": ">=6.0.0"
+        "node": "14.x",
+        "npm": "6.x"
     },
     "license": "MIT"
 }
