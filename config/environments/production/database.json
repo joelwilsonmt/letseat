@@ -5,10 +5,12 @@
             "connector": "strapi-hook-bookshelf",
             "settings": {
                 "client": "sqlite",
+                "ssl": "${process.env.DATABASE_SSL || false}",
                 "filename": "db/data.db"
             },
             "options": {
-                "useNullAsDefault": true
+                "useNullAsDefault": true,
+                "ssl": "${process.env.DATABASE_SSL || false}"
             }
         }
     }
