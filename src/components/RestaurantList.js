@@ -36,6 +36,9 @@ function RestaurantList(props) {
     const renderDishes = (restaurantID) => {
         return <Dishes restId={restaurantID}> </Dishes>;
     };
+
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337';
+
     if (searchQuery.length > 0) {
         const restList = searchQuery.map((res) => (
             <Col xs="12" sm="6" md="6" lg="4" key={res.id}>
@@ -52,7 +55,7 @@ function RestaurantList(props) {
                                         width: '100%',
                                         height: '100%',
                                     }}
-                                    src={`http://localhost:1337` + res.image.url}
+                                    src={`${API_URL}` + res.image.url}
                                 />
                             </div>
                             <CardBody style={{ height: '400px', overflow: 'hidden' }}>
