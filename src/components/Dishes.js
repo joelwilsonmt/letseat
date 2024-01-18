@@ -41,6 +41,8 @@ function Dishes({ restId, searchTerm }) {
         dish.name.toLowerCase().includes(searchTerm?.toLowerCase())
     );
 
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:1337';
+
     if (restId > 0) {
         return (
             <>
@@ -53,7 +55,7 @@ function Dishes({ restId, searchTerm }) {
                             <CardImg
                                 top={true}
                                 style={{ height: 150, width: 150 }}
-                                src={`http://localhost:1337${res.image.url}`}
+                                src={`${API_URL}${res.image.url}`}
                             />
                             <CardBody style={{ height: '400px', overflow: 'hidden' }}>
                                 <CardText
