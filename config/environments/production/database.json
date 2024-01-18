@@ -11,8 +11,7 @@
                 "database": "${process.env.DATABASE_NAME || 'strapi'}",
                 "username": "${process.env.DATABASE_USERNAME || ''}",
                 "password": "${process.env.DATABASE_PASSWORD || ''}",
-                "ssl": "${process.env.DATABASE_SSL || false}",
-                "filename": "db/data.db"
+                "ssl": "${process.env.DATABASE_SSL || false}"
             },
             "options": {
                 "ssl": "${process.env.DATABASE_SSL || false}",
