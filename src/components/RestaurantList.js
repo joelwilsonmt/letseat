@@ -44,7 +44,7 @@ function RestaurantList(props) {
             <Col xs="12" sm="6" md="6" lg="4" key={res.id}>
                 <Link href={`/restaurant/${res.id}`}>
                     <a>
-                        <Card style={{ margin: '0 0.5rem 20px 0.5rem', height: '500px' }}>
+                        <Card style={{ margin: '0 0.5rem 20px 0.5rem', height: '500px', minWidth: 400 }}>
                             <div style={{ paddingTop: '56.25%', position: 'relative' }}>
                                 <CardImg
                                     top={true}
@@ -54,6 +54,7 @@ function RestaurantList(props) {
                                         left: 0,
                                         width: '100%',
                                         height: '100%',
+                                        minWidth: 400
                                     }}
                                     src={`${API_URL}` + res.image.url}
                                 />
