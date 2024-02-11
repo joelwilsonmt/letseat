@@ -1,0 +1,22 @@
+{
+    "defaultConnection": "default",
+    "connections": {
+        "default": {
+            "connector": "bookshelf",
+            "settings": {
+                "client": "postgres",
+                "host": "ec2-107-21-67-46.compute-1.amazonaws.com",
+                "port": "5432",
+                "database": "deeehq2ou02jls",
+                "username": "iobiidppydfcww",
+                "password": "72ba9c57f72f5b20cf4a08a4485ff9757278b4ae8bb270d842d0e5488a32d26c",
+                "ssl": {
+                    "rejectUnauthorized": false
+                }
+            },
+            "options": {
+                "ssl": true
+            }
+        }
+    }
+}
