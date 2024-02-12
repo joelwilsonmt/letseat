@@ -1,0 +1,13 @@
+{
+    "host": "https://lets-eat-test-1eec62876dba.herokuapp.com",
+    "port": 1337,
+    "proxy": {
+        "enabled": false
+    },
+    "cron": {
+        "enabled": false
+    },
+    "admin": {
+        "autoOpen": false
+    }
+}
