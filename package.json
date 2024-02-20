@@ -12,35 +12,31 @@
     },
     "dependencies": {
         "draft-js": "^0.11.7",
-        "knex": "^0.21.6",
-        "lodash": "^4.17.5",
+        "knex": "^0.21.21",
+        "lodash": "^4.17.21",
         "pg": "^8.11.3",
         "react-draft-wysiwyg": "^1.15.0",
-        "sqlite3": "^5.1.6",
+        "sqlite3": "^5.1.7",
         "strapi": "3.6.11",
-        "strapi-admin": "3.0.0-beta.14",
+        "strapi-admin": "3.6.11",
         "strapi-bookshelf": "^3.0.0-alpha.12.7.1",
-        "strapi-hook-bookshelf": "3.0.0-beta.14",
-        "strapi-hook-knex": "^3.0.0-beta.14",
-        "strapi-plugin-content-manager": "3.0.0-beta.14",
-        "strapi-plugin-content-type-builder": "3.0.0-beta.14",
-        "strapi-plugin-email": "3.0.0-beta.14",
-        "strapi-plugin-graphql": "3.0.0-beta.14",
-        "strapi-plugin-settings-manager": "3.0.0-beta.14",
-        "strapi-plugin-upload": "3.0.0-beta.14",
-        "strapi-plugin-users-permissions": "3.0.0-beta.14",
-        "strapi-utils": "3.0.0-beta.14",
-        "stripe": "^8.222.0"
+        "strapi-hook-bookshelf": "3.0.0-next.31",
+        "strapi-hook-knex": "^3.0.0-next.31",
+        "strapi-plugin-content-manager": "3.6.11",
+        "strapi-plugin-content-type-builder": "3.6.11",
+        "strapi-plugin-email": "3.6.11",
+        "strapi-plugin-graphql": "3.6.11",
+        "strapi-plugin-settings-manager": "3.0.0-next.31",
+        "strapi-plugin-upload": "3.6.11",
+        "strapi-plugin-users-permissions": "3.6.11",
+        "strapi-utils": "3.6.11",
+        "stripe": "^14.17.0"
     },
     "author": {
         "name": "A Strapi developer + updates john R Williams jrw@mit.edu"
     },
     "strapi": {
         "uuid": "a45046ad-52e3-426c-a7aa-25c5de132bfe"
-    },
-    "engines": {
-        "node": "14.x",
-        "npm": "6.x"
     },
     "license": "MIT"
 }
